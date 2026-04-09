@@ -1,11 +1,18 @@
+import {  Routes, Route } from "react-router-dom";
+
+import Home from "./pages/Home";
+import Profile from "./pages/Profile";
 
 function App() {
-
   return (
-    <>
-      <h1>Social Media App</h1>
-    </>
-  )
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+
+        <Route path="/profile" element={<Profile />} />
+
+      </Routes>
+  );
 }
 
-export default App
+export default App;
