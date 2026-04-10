@@ -1,5 +1,7 @@
+import CreatePost from "../components/CreatePost";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { useState } from "react";
 
 /* WRAPPER */
 const AppWrapper = styled.div`
@@ -119,7 +121,30 @@ const Footer = styled.footer`
   font-size: 14px;
 `;
 
+/* MODAL BACKDROP */
+const Modal = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+`;
+
+/* MODAL CONTENT WRAPPER */
+const ModalContent = styled.div`
+  width: 90%;
+  max-width: 500px;
+`;
+
 export default function MainLayout({ children }) {
+  
+  const [isOpen, setIsOpen] = useState(false);
+
   return (
     <AppWrapper>
       <Navbar>
@@ -150,7 +175,15 @@ export default function MainLayout({ children }) {
         </Content>
       </Layout>
 
-      <FloatingButton>+</FloatingButton>
+      <FloatingButton onClick={() => setIsOpen(true)}>+</FloatingButton>
+
+      {isOpen && (
+        <Modal onClick={() => setIsOpen(false)}>
+          <ModalContent onClick={(e) => e.stopPropagation()}>
+            <CreatePost isModal onClose={() => setIsOpen(false)} />
+          </ModalContent>
+        </Modal>
+      )}
 
       <Footer>
         © 2026 Iliyan Nikolaev Matsin — SoftUni, React September 2026, Final Project
