@@ -28,6 +28,10 @@ const NavContent = styled.div`
 
 const Logo = styled.h2`
   font-size: 18px;
+
+  @media (max-width: 900px) {
+    font-size: 14px;
+  }
 `;
 
 const NavLinks = styled.div`
@@ -39,10 +43,6 @@ const NavLinks = styled.div`
 
   a:hover {
     color: var(--text);
-  }
-
-  @media (max-width: 900px) {
-    display: none;
   }
 `;
 
