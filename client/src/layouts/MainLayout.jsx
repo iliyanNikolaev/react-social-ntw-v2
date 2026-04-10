@@ -124,7 +124,7 @@ export default function MainLayout({ children }) {
     <AppWrapper>
       <Navbar>
         <NavContent>
-          <Logo>social-ntv-v2</Logo>
+          <Logo>social-ntw-v2</Logo>
 
           <NavLinks>
             <Link to="/">Home</Link>
