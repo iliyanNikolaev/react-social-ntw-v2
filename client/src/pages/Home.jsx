@@ -1,12 +1,13 @@
-import CreatePost from "../components/CreatePost";
+import CreatePost from "../components/CreatePost/CreatePost";
 import PostCard from "../components/PostCard";
-import MainLayout from "../layouts/MainLayout";
+import MainLayout from "../layouts/MainLayout/MainLayout";
 
 export default function Home() {
   return (
     <MainLayout>
       <div className="container">
         <CreatePost />
+
         <PostCard />
         <PostCard />
         <PostCard />
@@ -16,6 +17,7 @@ export default function Home() {
         <PostCard />
         <PostCard />
         <PostCard />
+
       </div>
     </MainLayout>
   );
