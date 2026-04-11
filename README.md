@@ -37,7 +37,6 @@ MainLayout
 ├── Navbar
 ├── Sidebar
 ├── Content (children)
-├── Floating Button (+)
 └── Footer
 ```
 
@@ -136,13 +135,14 @@ import { Routes, Route } from "react-router-dom";
 src/
  ├── App.jsx
  ├── index.css
+ ├── components/
+      └── ...
  ├── layouts/
  │    └── MainLayout.jsx
  ├── pages/
  │    ├── Home.jsx
  │    ├── Profile.jsx
  │    ├── Users.jsx
- │    ├── PostDetails.jsx
  │    ├── EditPost.jsx
  │    ├── EditProfile.jsx
  │    ├── Login.jsx
