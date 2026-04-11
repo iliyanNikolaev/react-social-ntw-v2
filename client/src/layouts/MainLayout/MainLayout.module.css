@@ -11,7 +11,7 @@
   background: var(--bg);
   border-bottom: 1px solid var(--border);
   padding: 12px 16px;
-  z-index: 10;
+  z-index: 100;
 }
 
 .navContent {
@@ -23,19 +23,20 @@
 }
 
 .logo {
-  font-size: 18px;
+  font-size: 1.1rem;
 }
 
-@media (max-width: 900px) {
-  .logo {
-    font-size: 14px;
-  }
+/* NAV LINKS (desktop only) */
+.navLinks {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
 .navLinks a {
-  margin-left: 16px;
-  font-size: 14px;
+  font-size: 0.85rem;
   color: var(--text-secondary);
+  transition: color 0.2s;
 }
 
 .navLinks a:hover {
@@ -46,54 +47,38 @@
 .layout {
   display: flex;
   flex: 1;
-  max-width: 1200px;
   width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
-}
-
-@media (max-width: 900px) {
-  .layout {
-    flex-direction: column;
-  }
 }
 
 /* SIDEBAR */
 .sidebar {
+  display: none;
   width: 220px;
-  padding: 20px 10px;
+  padding: 24px 16px;
   border-right: 1px solid var(--border);
-  display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
 .sidebar a {
   color: var(--text-secondary);
-  font-size: 15px;
+  font-size: 0.95rem;
+  transition: color 0.2s;
 }
 
 .sidebar a:hover {
   color: var(--text);
 }
 
-@media (max-width: 900px) {
-  .sidebar {
-    display: none;
-  }
-}
-
 /* CONTENT */
 .content {
   flex: 1;
+  width: 100%;
+  padding: 12px;
   display: flex;
   justify-content: center;
-  padding: 20px;
-}
-
-@media (max-width: 900px) {
-  .content {
-    padding: 12px;
-  }
 }
 
 /* FOOTER */
@@ -102,6 +87,51 @@
   text-align: center;
   padding: 16px;
   color: var(--text-secondary);
-  font-size: 14px;
+  font-size: 0.8rem;
+  margin-top: auto;
 }
 
+/* ========================= */
+/* 📱 TABLET */
+/* ========================= */
+@media (min-width: 768px) {
+  .content {
+    padding: 16px;
+  }
+
+  .logo {
+    font-size: 1.2rem;
+  }
+}
+
+/* ========================= */
+/* 💻 DESKTOP */
+/* ========================= */
+@media (min-width: 900px) {
+  .sidebar {
+    display: flex;
+  }
+
+
+  .content {
+    justify-content: flex-start;
+    padding: 24px;
+  }
+}
+
+/* ========================= */
+/* 📱 SMALL MOBILE FIXES */
+/* ========================= */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px 12px;
+  }
+
+  .logo {
+    font-size: 1rem;
+  }
+
+  .content {
+    padding: 10px;
+  }
+}

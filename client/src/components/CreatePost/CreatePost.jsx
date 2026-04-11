@@ -1,7 +1,7 @@
 import { useState } from "react";
 import styles from "./CreatePost.module.css";
 
-export default function CreatePost({ onClose, isModal }) {
+export default function CreatePost() {
   const [text, setText] = useState("");
 
   const handleSubmit = (e) => {
@@ -10,15 +10,10 @@ export default function CreatePost({ onClose, isModal }) {
 
     console.log("New post:", text);
     setText("");
-    if (onClose) onClose();
   };
 
-  
-  // Комбинираме базовия клас .wrapper с .isModal, ако условието е изпълнено
-  const containerClass = `${styles.wrapper} ${isModal ? styles.isModal : ""}`;
-
   return (
-    <div className={containerClass}>
+    <div className={styles.wrapper}>
       <form className={styles.form} onSubmit={handleSubmit}>
         <textarea
           className={styles.textarea}

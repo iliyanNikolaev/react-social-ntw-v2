@@ -1,4 +1,3 @@
-import FloatingButton from "../../components/FloatingButton/FloatingButton";
 import styles from "./MainLayout.module.css";
 import { Link } from "react-router-dom";
 
@@ -33,8 +32,6 @@ export default function MainLayout({ children }) {
           {children}
         </main>
       </div>
-
-      <FloatingButton/>
 
       <footer className={styles.footer}>
         © 2026 Iliyan Nikolaev Matsin — SoftUni, React September 2026, Final Project

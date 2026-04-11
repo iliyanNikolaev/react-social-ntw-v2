@@ -3,14 +3,13 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
-  margin-bottom: 16px; /* Стойност по подразбиране */
-  width: auto; /* Стойност по подразбиране */
+  margin-bottom: 16px;
+  width: 100%;
+  transition: 0.2s;
 }
 
-/* Този клас ще се добавя само ако isModal е true */
-.isModal {
-  margin-bottom: 0;
-  width: 100%;
+.wrapper:hover {
+  background-color: var(--hover);
 }
 
 .form {
@@ -19,35 +18,59 @@
   gap: 10px;
 }
 
+/* TEXTAREA */
 .textarea {
+  width: 100%;
   resize: none;
-  min-height: 80px;
+  min-height: 90px;
   padding: 12px;
   border-radius: 12px;
   border: 1px solid var(--border);
   background-color: var(--bg);
   color: var(--text);
   font-family: inherit;
+  font-size: 1rem;
+  line-height: 1.4;
   transition: border-color 0.2s;
 }
 
 .textarea:focus {
   outline: none;
-  border-color: #555;
+  border-color: var(--text-secondary);
 }
 
+/* BUTTON */
 .button {
   align-self: flex-end;
   background-color: var(--accent);
-  color: #000;
+  color: black;
   border: none;
-  padding: 8px 14px;
+  padding: 8px 16px;
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
 .button:hover {
   opacity: 0.85;
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 480px) {
+  .wrapper {
+    padding: 12px;
+  }
+
+  .textarea {
+    min-height: 80px;
+    font-size: 0.95rem;
+  }
+
+  .button {
+    width: 100%;
+    text-align: center;
+  }
 }

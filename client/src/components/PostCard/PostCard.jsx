@@ -68,6 +68,7 @@ export default function PostCard() {
       {showComments && (
         <div className={styles.commentsWrapper}>
           {/* LIST */}
+          
           {comments.map(c => (
             <div key={c.id} className={styles.comment}>
               <span className={styles.commentUser}>@{c.user}</span>

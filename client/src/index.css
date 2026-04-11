@@ -1,11 +1,11 @@
-/* RESET */
+/* 1. RESET */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* VARIABLES */
+/* 2. VARIABLES */
 :root {
   --bg: #000000;
   --bg-secondary: #121212;
@@ -14,72 +14,82 @@
   --border: #262626;
   --accent: #ffffff;
   --hover: #1a1a1a;
-  --radius: 16px;
+  --radius: 12px;
 }
 
-/* BODY */
+/* 3. BODY */
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--bg);
   color: var(--text);
   line-height: 1.5;
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
 }
 
-/* LINKS */
+/* 4. GLOBAL ELEMENT FIXES */
+
+/* images няма да чупят layout */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* линкове */
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* FEED CONTAINER */
-.container {
-  width: 100%;
-  max-width: 600px;
-  margin: 0 auto;
-}
+/* 5. UTILITIES */
 
-/* CARD */
 .card {
   background-color: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 16px;
-  margin-bottom: 16px;
-  transition: 0.2s;
+  width: 100%;
 }
 
-.card:hover {
-  background-color: var(--hover);
-}
-
-/* BUTTON */
 .button {
   background-color: var(--accent);
   color: #000;
   border: none;
-  padding: 10px 16px;
+  padding: 12px 20px;
   border-radius: 999px;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.2s;
+  transition: opacity 0.2s;
+
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button:hover {
   opacity: 0.85;
 }
 
-/* INPUT */
-.input {
+/* 6. CONTAINER */
+
+.container {
   width: 100%;
-  padding: 12px;
-  border-radius: 12px;
-  border: 1px solid var(--border);
-  background-color: var(--bg-secondary);
-  color: var(--text);
-  margin-bottom: 12px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 16px;
 }
 
-.input:focus {
-  outline: none;
-  border-color: #555;
+/* tablet+ */
+@media (min-width: 768px) {
+  .container {
+    padding: 0;
+  }
+}
+
+/* 7. MOBILE IMPROVEMENTS */
+
+@media (max-width: 480px) {
+  .button {
+    width: 100%;
+  }
 }
