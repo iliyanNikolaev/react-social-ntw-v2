@@ -35,7 +35,8 @@ export default function PostCard() {
     <div className={styles.card}>
       {/* USER */}
       <div className={styles.userRow}>
-        <div className={styles.avatar} />
+
+        <img className={styles.avatar} src="https://res.cloudinary.com/dwq3ysahj/image/upload/v1712815754/ftl4jienohqp2tib7yic.avif" alt="avatar" />
         <div className={styles.userInfo}>
           <div className={styles.username}>Iliyan</div>
           <div className={styles.handle}>@iliyan_dev</div>
