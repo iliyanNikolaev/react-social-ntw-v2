@@ -1,5 +1,5 @@
 import CreatePost from "../components/CreatePost/CreatePost";
-import PostCard from "../components/PostCard";
+import PostCard from "../components/PostCard/PostCard";
 import MainLayout from "../layouts/MainLayout/MainLayout";
 
 export default function Home() {

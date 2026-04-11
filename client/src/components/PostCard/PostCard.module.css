@@ -1,0 +1,126 @@
+.card {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px;
+  margin-bottom: 16px;
+  transition: 0.2s;
+}
+
+.card:hover {
+  background-color: var(--hover);
+}
+
+/* USER ROW */
+.userRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 10px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #333;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: 600;
+}
+
+.handle {
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* TEXT */
+.postText {
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+/* ACTIONS */
+.actions {
+  display: flex;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.actionButton {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.actionButton:hover {
+  color: var(--text);
+}
+
+/* Динамичен клас за харесан пост */
+.isLiked {
+  color: #ff3b5c !important;
+}
+
+.isLiked:hover {
+  color: #ff3b5c !important;
+}
+
+/* COMMENTS */
+.commentsWrapper {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.comment {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.commentUser {
+  font-weight: 600;
+  margin-right: 6px;
+}
+
+.commentInputWrapper {
+  display: flex;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.commentInput {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+}
+
+.commentInput:focus {
+  outline: none;
+  border-color: #555;
+}
+
+.commentButton {
+  border: none;
+  background: var(--accent);
+  color: black;
+  padding: 6px 16px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
