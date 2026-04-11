@@ -1,8 +1,8 @@
-# Тук може да се придобие бегла представа какво ще представлява user interface-a на приложението: glowing-gumdrop-34370b.netlify.app   <--- LIVE DEMO HERE
+# Тук може да се придобие бегла представа какво ще представлява user interface-a на приложението: [glowing-gumdrop-34370b.netlify.app](https://glowing-gumdrop-34370b.netlify.app/)  <---- LIVE DEMO HERE
 
 # Архитектура на проекта
 
-Този документ описва структурата и начина, по който е организирано приложението.
+Този документ описва структурата и начина, по който е организирано приложението.   
 
 ---
 
@@ -61,7 +61,6 @@ MainLayout
 - Home
 - Profile
 - Users
-- PostDetails
 - EditPost
 - EditProfile
 - Login
