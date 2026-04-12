@@ -38,6 +38,7 @@
 }
 
 .followBtn,
+.followingBtn,
 .editBtn {
   border: none;
   border-radius: 999px;
@@ -48,6 +49,11 @@
 
 .followBtn {
   background: var(--accent);
+  color: black;
+}
+
+.followingBtn {
+  background: grey;
   color: black;
 }
 

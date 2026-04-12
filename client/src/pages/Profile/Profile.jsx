@@ -1,11 +1,8 @@
 import MainLayout from "../../layouts/MainLayout/MainLayout";
 import PostCard from "../../components/PostCard/PostCard";
 import styles from "./Profile.module.css";
-import { useState } from "react";
 
 export default function Profile() {
-  const isOwner = true; // simulate logged user
-  const [isFollowing, setIsFollowing] = useState(false);
 
   return (
     <MainLayout>
@@ -32,17 +29,17 @@ export default function Profile() {
                 <button className={styles.editBtn}>
                   Edit Profile
                 </button>
+
+                <button
+                  className={styles.followingBtn}
+                >
+                 Following
+                </button>
                 <button
                   className={styles.followBtn}
-                  onClick={() => setIsFollowing(!isFollowing)}
+                  disabled={true}
                 >
-                 "Following"
-                </button>
-                                <button
-                  className={styles.followBtn}
-                  onClick={() => setIsFollowing(!isFollowing)}
-                >
-                 "Follow"
+                 Follow
                 </button>
                 
             </div>
