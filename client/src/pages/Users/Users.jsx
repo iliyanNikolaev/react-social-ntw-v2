@@ -6,7 +6,7 @@ export default function Users() {
   const [following, setFollowing] = useState({});
 
   const users = [
-    { id: 1, username: "iliyan" },
+    { id: 1, username: "iliyan_dev" },
     { id: 2, username: "maria" },
     { id: 3, username: "ivan" },
     { id: 4, username: "georgi" },

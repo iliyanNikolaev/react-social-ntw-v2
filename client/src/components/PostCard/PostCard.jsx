@@ -38,14 +38,14 @@ export default function PostCard() {
 
         <img className={styles.avatar} src="https://res.cloudinary.com/dwq3ysahj/image/upload/v1712815754/ftl4jienohqp2tib7yic.avif" alt="avatar" />
         <div className={styles.userInfo}>
-          <div className={styles.username}>Iliyan</div>
+          <div className={styles.username}>iliyan_dev</div>
           <div className={styles.handle}>@iliyan_dev</div>
         </div>
       </div>
 
       {/* TEXT */}
       <div className={styles.postText}>
-        Това е примерен пост. В момента UI-то е хардкоднато, но по-късно ще го вържем със Supabase.
+        Това е примерен пост. В момента user interface-a е хардкоднат, но по-късно ще го свържем със Supabase.
       </div>
 
       {/* ACTIONS */}
