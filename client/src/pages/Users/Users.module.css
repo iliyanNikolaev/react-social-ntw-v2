@@ -1,0 +1,61 @@
+/* LIST */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* USER CARD */
+.userCard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* USER INFO */
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.username {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.handle {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+}
+
+/* BUTTON */
+.followBtn {
+  border: none;
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-weight: 600;
+  cursor: pointer;
+  background: var(--accent);
+  color: black;
+  transition: 0.2s;
+}
+
+.followBtn:hover {
+  opacity: 0.85;
+}
+
+/* ========================= */
+/* 📱 MOBILE */
+/* ========================= */
+@media (max-width: 480px) {
+  .userCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .followBtn {
+    width: 100%;
+    text-align: center;
+  }
+}
