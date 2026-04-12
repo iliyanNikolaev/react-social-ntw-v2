@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import EditProfile from "./pages/EditProfile";
 import Register from "./pages/Register";
 import EditPost from "./pages/EditPost";
-import Profile from "./pages/Profile";
+import Profile from "./pages/Profile/Profile";
 import Users from "./pages/Users";
 import Login from "./pages/Login";
 import Home from "./pages/Home";
